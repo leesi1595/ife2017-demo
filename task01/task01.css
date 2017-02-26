@@ -1,0 +1,65 @@
+input{
+    margin:0;
+    display: none;
+}
+#myCheckBox+label,#myRadio+label{
+    margin-bottom: 10px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #d3d3d3;
+    display: -webkit-flex;
+    display:flex;
+}
+#myCheckBox:checked+label,#myRadio:checked+label{
+    border: 1px solid #d73d32;
+}
+#myCheckBox:checked+label::after{
+    margin: auto;
+    text-align: center;
+    content: '\2714';
+    color: red;.
+    width:10px;
+    height:10px;
+    line-height: 10px;
+    font-size: 15px;
+}
+#myRadio+label{
+    border-radius: 50%;
+}
+#myRadio:checked+label::after{
+    margin: auto;
+    text-align: center;
+    border-radius: 50%;
+    width:7px;
+    height:7px;
+    line-height: 7px;
+    content: ' ';
+    background: #d73d32;
+}
+#myCheckBox_sp+label,.radioBox_sprit+label{
+    width: 16px;
+    height:16px;
+    border:none;
+    display: inline-block;
+    background:url('bg.png') no-repeat;
+}
+#myCheckBox_sp+label{
+    display:block;
+    margin-bottom: 10px;
+    width: 20px;
+    height: 20px;
+    background: url('checkboxbg1.jpg');
+}
+#myCheckBox_sp:checked+label{
+    background: url('checkboxbg.jpg');
+}
+#myRadio_sp+label{
+    display:block;
+    margin-bottom: 10px;
+    width: 20px;
+    height: 20px;
+    background: url('radio_bg1.jpg');
+}
+#myRadio_sp:checked+label{
+   background: url('radio_bg.jpg');
+}
