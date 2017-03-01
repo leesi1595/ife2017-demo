@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>自定义鼠标右击菜单</title>
+<link rel="stylesheet" type="text/css" href="task02.css">
+<script type="text/javascript">
+	window.onload=function(){
+		var menu=document.getElementById('menu');
+		var domain=document.getElementById('domain');
+ 		domain.oncontextmenu = function (event) {
+ 			var event = event || window.event,
+ 			    style = menu.style,
+ 			    right=domain.clientX-event.clientX,
+ 			    down=domain.clientY-event.clientY;
+ 			style.display = "block";
+ 			style.left = event.clientX + "px";
+ 			style.top = event.clientY + "px";
+ 			return false;
+ 		}
+ 		document.onclick = function (){
+ 			menu.style.display = "none";
+ 		}
+ 	}
+</script>
+</head>
+<body>
+<ul id="menu">
+	<li>Menu Item 1</li>
+	<li>Menu Item 2</li>
+	<li>Menu Item 3</li>
+	<li>Menu Item 4</li>
+</ul>
+<div id="domain"><center>右击此区域</center></div>
+</body>
+</html>

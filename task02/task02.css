@@ -1,0 +1,16 @@
+body,ul,li{
+	margin:0;
+	padding:0;
+}
+#menu{
+	position:absolute;
+	display:none;
+	width:100px;
+	height: 68x;
+	border-radius:3px;
+	list-style-type:none;
+	border:1px solid #8f8f8f;
+	padding:2px;
+	background:#fff;
+}
+
